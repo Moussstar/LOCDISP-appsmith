@@ -1,0 +1,6 @@
+SELECT 
+    id,
+    nom,
+    poids_kg,
+    nom || ' (' || poids_kg || ' kg)' AS label_affiche
+FROM materiels;

@@ -1,0 +1,5 @@
+UPDATE ordres_transport
+SET 
+    camion_id = NULL,
+    statut = 'a_planifier'
+WHERE id = {{ Table_Planifies.triggeredRow ? Table_Planifies.triggeredRow.ordre_id : (Table_Planifies.selectedRow ? Table_Planifies.selectedRow.ordre_id : null) }};

@@ -1,0 +1,11 @@
+SELECT 
+    id, 
+    immatriculation, 
+    modele, 
+    charge_max_kg, 
+    longueur_utile_cm, 
+    largeur_utile_cm, 
+    hauteur_utile_cm,
+    -- Création d'un libellé personnalisé complet :
+    modele || ' (' || immatriculation || ') - Capacité: ' || charge_max_kg || ' kg' AS label_affiche
+FROM camions;

@@ -1,0 +1,17 @@
+SELECT 
+    ot.id AS ordre_id,
+    c.nom_entreprise AS client,
+    ch.nom_chantier AS chantier,
+    m.nom AS materiel,
+    m.poids_kg,
+    ca.modele || ' (' || ca.immatriculation || ')' AS camion_assigne,
+    ot.type_action,
+    ot.date_planifiee,
+    ot.statut
+FROM ordres_transport ot
+JOIN chantiers ch ON ot.chantier_id = ch.id
+JOIN clients c ON ch.client_id = c.id
+JOIN materiels m ON ot.materiel_id = m.id
+JOIN camions ca ON ot.camion_id = ca.id
+WHERE ot.statut = 'planifie'
+ORDER BY ot.date_planifiee DESC;
