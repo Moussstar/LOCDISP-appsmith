@@ -31,7 +31,7 @@
   "isDisabled": "{{ (() => { const o = Table_Ordres.selectedRow; const c = (get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue)); const tient = (o, c) => o.hauteur_cm <= c.hauteur_utile_cm && ((o.longueur_cm <= c.longueur_utile_cm && o.largeur_cm <= c.largeur_utile_cm) || (o.longueur_cm <= c.largeur_utile_cm && o.largeur_cm <= c.longueur_utile_cm)); return !o || !o.ordre_id || !c || Number(o.poids_kg) > Number(c.charge_max_kg) || (o.longueur_cm != null && !tient(o, c)); })() }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "3qlavsmlz1",
+  "key": "gp74zd3jnw",
   "leftColumn": 0,
   "minWidth": 120.0,
   "mobileBottomRow": 57,
@@ -54,6 +54,6 @@
   "topRow": 53,
   "type": "BUTTON_WIDGET",
   "version": 1.0,
-  "widgetId": "75i63rmhvk",
+  "widgetId": "ac5qd1ydfc",
   "widgetName": "Button_Assigner"
 }

@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
-  "key": "wzix69gup3",
+  "key": "bgboutppom",
   "label": "Nom *",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "k2043nvjuu",
+  "widgetId": "urumyowe79",
   "widgetName": "Input_Depots_nom"
 }

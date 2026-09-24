@@ -31,7 +31,7 @@
   "isDisabled": "{{ Table_Parc.selectedRow.statut !== 'maintenance' }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "0foh3hj5s6",
+  "key": "9xx5chsggu",
   "leftColumn": 52,
   "minWidth": 120.0,
   "mobileBottomRow": 85,
@@ -54,6 +54,6 @@
   "topRow": 81,
   "type": "BUTTON_WIDGET",
   "version": 1.0,
-  "widgetId": "25hbpkt9a9",
+  "widgetId": "q5xa0jxdqy",
   "widgetName": "Button_Retour_Depot"
 }

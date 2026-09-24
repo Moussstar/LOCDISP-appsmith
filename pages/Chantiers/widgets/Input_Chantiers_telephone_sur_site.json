@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "1z0shzbuk3",
+  "key": "kjqv0rrwoz",
   "label": "Tél. sur site",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 67,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "9wezc1b3eu",
+  "widgetId": "wehw5n3zny",
   "widgetName": "Input_Chantiers_telephone_sur_site"
 }

@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "eka024scos",
+  "key": "k88b0l1cou",
   "label": "Manutention (min)",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 60,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "dgnnqfkpl9",
+  "widgetId": "1g7nwsj4ho",
   "widgetName": "Input_Parc_duree_manutention_min"
 }

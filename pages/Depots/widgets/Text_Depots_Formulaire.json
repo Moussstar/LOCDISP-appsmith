@@ -24,7 +24,7 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "8st4pzt3ed",
+  "key": "qjk9wy28hg",
   "leftColumn": 39,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -51,6 +51,6 @@
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "vcbfcqn0b5",
+  "widgetId": "m0btdgjgpu",
   "widgetName": "Text_Depots_Formulaire"
 }

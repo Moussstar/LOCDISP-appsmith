@@ -32,7 +32,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "hqlqcg1wu1",
+  "key": "vij3nkawmv",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelText": "Chantier",
@@ -64,6 +64,6 @@
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "vrerw6z8vb",
+  "widgetId": "8psc7twzj9",
   "widgetName": "Select_Chantier"
 }

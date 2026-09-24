@@ -31,7 +31,7 @@
   "isDisabled": "{{ !Input_Clients_nom_entreprise.text || (!appsmith.store.nouveau_clients && !Table_Clients.selectedRow.id) }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "h3xqyxgo4b",
+  "key": "qekn5xipae",
   "leftColumn": 39,
   "minWidth": 120.0,
   "mobileBottomRow": 51,
@@ -54,6 +54,6 @@
   "topRow": 47,
   "type": "BUTTON_WIDGET",
   "version": 1.0,
-  "widgetId": "joz9xfzaq8",
+  "widgetId": "x0lbcw45kj",
   "widgetName": "Button_Clients_Enregistrer"
 }

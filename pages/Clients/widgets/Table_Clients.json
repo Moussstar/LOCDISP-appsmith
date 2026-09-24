@@ -98,7 +98,7 @@
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
-  "key": "u4yyj5ci6v",
+  "key": "2liymdxiwp",
   "label": "Données",
   "leftColumn": 0,
   "minWidth": 450,
@@ -313,6 +313,6 @@
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "8y3umpyo0c",
+  "widgetId": "rruea3b7i4",
   "widgetName": "Table_Clients"
 }

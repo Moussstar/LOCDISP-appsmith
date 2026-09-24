@@ -31,7 +31,7 @@
   "isDisabled": "{{ !Input_Depots_nom.text || (!appsmith.store.nouveau_depots && !Table_Depots.selectedRow.id) }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "z6ccciv473",
+  "key": "i4bguxvvvu",
   "leftColumn": 39,
   "minWidth": 120.0,
   "mobileBottomRow": 44,
@@ -54,6 +54,6 @@
   "topRow": 40,
   "type": "BUTTON_WIDGET",
   "version": 1.0,
-  "widgetId": "igzxv9xjm6",
+  "widgetId": "eyzbnmwnba",
   "widgetName": "Button_Depots_Enregistrer"
 }

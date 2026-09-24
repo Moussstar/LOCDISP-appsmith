@@ -32,7 +32,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "om3wtoobmz",
+  "key": "r4absytktg",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelText": "Type",
@@ -64,6 +64,6 @@
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "lv0prkgyc4",
+  "widgetId": "j6sbrnjf2r",
   "widgetName": "Select_Type"
 }

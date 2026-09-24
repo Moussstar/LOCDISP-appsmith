@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
-  "key": "spthdp03eh",
+  "key": "2c12zv0dww",
   "label": "Longueur utile (cm) *",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 32,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "afbqnj971h",
+  "widgetId": "3zx4g1vw5v",
   "widgetName": "Input_Camions_longueur_utile_cm"
 }

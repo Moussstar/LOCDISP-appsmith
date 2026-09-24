@@ -98,7 +98,7 @@
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
-  "key": "9rit8f6kjk",
+  "key": "f0jl8o453c",
   "label": "Données",
   "leftColumn": 0,
   "minWidth": 450,
@@ -313,6 +313,6 @@
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "kkuow7sfqm",
+  "widgetId": "oa5tbum4rj",
   "widgetName": "Table_Depots"
 }

@@ -27,7 +27,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "tz9atsn1u3",
+  "key": "o2af6tps9b",
   "label": "Date planifiée",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 26,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "0uzs9im0yl",
+  "widgetId": "c34zlib462",
   "widgetName": "DatePicker_Prevue"
 }

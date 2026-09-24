@@ -11,6 +11,7 @@ SELECT
     ca.chauffeur_nom,
     ca.heure_debut,
     ca.heure_fin,
+    ca.cout_horaire,
     ca.actif
 FROM camions ca
 LEFT JOIN depots d ON d.id = ca.depot_id

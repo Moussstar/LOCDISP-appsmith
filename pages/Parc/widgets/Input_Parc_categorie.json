@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "059p452bfs",
+  "key": "689jmpepqn",
   "label": "Catégorie",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 25,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "qvrr9a7mfp",
+  "widgetId": "y38m5iw91t",
   "widgetName": "Input_Parc_categorie"
 }

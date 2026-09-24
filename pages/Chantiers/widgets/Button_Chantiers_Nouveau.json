@@ -24,7 +24,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "2gvf6lcp22",
+  "key": "hn5av43xpo",
   "leftColumn": 52,
   "minWidth": 120.0,
   "mobileBottomRow": 93,
@@ -47,6 +47,6 @@
   "topRow": 89,
   "type": "BUTTON_WIDGET",
   "version": 1.0,
-  "widgetId": "39c2mu46jd",
+  "widgetId": "ue6opccmcn",
   "widgetName": "Button_Chantiers_Nouveau"
 }

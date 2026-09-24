@@ -31,7 +31,7 @@
   "isDisabled": "{{ !Table_Planifies.selectedRow.ordre_id }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "xehd96m8jk",
+  "key": "0t0xm9q9tc",
   "leftColumn": 0,
   "minWidth": 120.0,
   "mobileBottomRow": 95,
@@ -54,6 +54,6 @@
   "topRow": 91,
   "type": "BUTTON_WIDGET",
   "version": 1.0,
-  "widgetId": "0948npf727",
+  "widgetId": "y2a7arcpr0",
   "widgetName": "Button_Annuler"
 }

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    t.id,\n    ca.modele || ' (' || ca.immatriculation || ')' AS camion,\n    ca.chauffeur_nom AS chauffeur,\n    t.statut,\n    t.heure_depart,\n    t.heure_retour,\n    ROUND(t.distance_m / 1000.0, 1) AS distance_km,\n    COUNT(ot.id) AS nb_arrets\nFROM tournees t\nJOIN camions ca ON ca.id = t.camion_id\nLEFT JOIN ordres_transport ot ON ot.tournee_id = t.id\nWHERE t.date_tournee = {{ DatePicker_Tournee.formattedDate }}::date\nGROUP BY t.id, ca.modele, ca.immatriculation, ca.chauffeur_nom\nORDER BY t.heure_depart;\n",
+      "body": "SELECT\n    t.id,\n    t.camion_id,\n    ca.modele || ' (' || ca.immatriculation || ')' AS camion,\n    ca.chauffeur_nom AS chauffeur,\n    t.statut,\n    t.heure_depart,\n    t.heure_retour,\n    ROUND(t.distance_m / 1000.0, 1) AS distance_km,\n    COUNT(ot.id) AS nb_arrets,\n    t.geometrie\nFROM tournees t\nJOIN camions ca ON ca.id = t.camion_id\nLEFT JOIN ordres_transport ot ON ot.tournee_id = t.id\nWHERE t.date_tournee = {{ DatePicker_Tournee.formattedDate }}::date\nGROUP BY t.id, ca.modele, ca.immatriculation, ca.chauffeur_nom\nORDER BY t.heure_depart;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

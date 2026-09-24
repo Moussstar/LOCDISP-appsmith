@@ -24,7 +24,7 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "4qvzfv8yu5",
+  "key": "y1egj6au1l",
   "leftColumn": 39,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -51,6 +51,6 @@
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "g2g73aj0je",
+  "widgetId": "wtz50jvpax",
   "widgetName": "Text_Clients_Formulaire"
 }

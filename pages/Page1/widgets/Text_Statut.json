@@ -24,7 +24,7 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "lscatgvs38",
+  "key": "5npqtfesx5",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -51,6 +51,6 @@
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "fo8cl0lcz5",
+  "widgetId": "qhcjyusat2",
   "widgetName": "Text_Statut"
 }

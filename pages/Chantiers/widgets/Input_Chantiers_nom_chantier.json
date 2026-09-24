@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
-  "key": "61gh9n12o0",
+  "key": "hcq7726udt",
   "label": "Chantier *",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 18,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "jeir9uy7s3",
+  "widgetId": "0dkd4oe0vc",
   "widgetName": "Input_Chantiers_nom_chantier"
 }

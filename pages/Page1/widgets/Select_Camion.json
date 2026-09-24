@@ -28,7 +28,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "8r9rigppd7",
+  "key": "hdbol5mkjy",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelText": "Camion",
@@ -59,6 +59,6 @@
   "topRow": 41,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "scsfw2q4nm",
+  "widgetId": "jnanx3uk04",
   "widgetName": "Select_Camion"
 }

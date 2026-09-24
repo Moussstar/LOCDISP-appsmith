@@ -12,6 +12,7 @@ SELECT
     ch.instructions_acces,
     m.nom AS materiel,
     m.poids_kg,
+    m.duree_manutention_min,
     ch.latitude,
     ch.longitude,
     ot.id AS ordre_id,

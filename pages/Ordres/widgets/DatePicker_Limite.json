@@ -31,7 +31,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": "{{ Select_Type.selectedOptionValue === 'ramassage' }}",
-  "key": "fptomjbcp4",
+  "key": "bvcgnnidt8",
   "label": "Fin de location",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -60,6 +60,6 @@
   "topRow": 26,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "22n64kfs6v",
+  "widgetId": "a18u6gf41y",
   "widgetName": "DatePicker_Limite"
 }

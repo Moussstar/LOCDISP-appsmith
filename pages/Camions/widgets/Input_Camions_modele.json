@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "6j1fo2wb0d",
+  "key": "xrehco4xoi",
   "label": "Modèle",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 18,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "x9g7hsfkr2",
+  "widgetId": "l0a3vce2wy",
   "widgetName": "Input_Camions_modele"
 }

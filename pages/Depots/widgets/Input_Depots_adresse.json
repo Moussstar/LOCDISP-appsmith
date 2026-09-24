@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "pkuumk5635",
+  "key": "h0pwxswhq7",
   "label": "Adresse",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 18,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "hr2pjgdsy0",
+  "widgetId": "7gqkp591sr",
   "widgetName": "Input_Depots_adresse"
 }

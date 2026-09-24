@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "hw1hs57tco",
+  "key": "cw39oxbu6z",
   "label": "Fermeture",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 53,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "fr21520rn6",
+  "widgetId": "4qo62uvsc3",
   "widgetName": "Input_Chantiers_heure_fermeture"
 }

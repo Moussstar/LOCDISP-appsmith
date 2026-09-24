@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "mqigct2cxi",
+  "key": "r15hpxqkfq",
   "label": "E-mail",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 32,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "bzrad5sowo",
+  "widgetId": "n3np5maqjd",
   "widgetName": "Input_Clients_email"
 }

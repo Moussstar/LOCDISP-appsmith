@@ -42,6 +42,7 @@
     "chauffeur_nom",
     "heure_debut",
     "heure_fin",
+    "cout_horaire",
     "actif"
   ],
   "columnUpdatedAt": 1790025916985,
@@ -101,6 +102,9 @@
       "key": "primaryColumns.heure_fin.computedValue"
     },
     {
+      "key": "primaryColumns.cout_horaire.computedValue"
+    },
+    {
       "key": "primaryColumns.actif.computedValue"
     }
   ],
@@ -122,7 +126,7 @@
   "isVisibleFilters": false,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
-  "key": "lnv5moijes",
+  "key": "ppa7rjzmnh",
   "label": "Données",
   "leftColumn": 0,
   "minWidth": 450,
@@ -151,7 +155,7 @@
       "enableSort": true,
       "horizontalAlignment": "LEFT",
       "id": "actif",
-      "index": 11,
+      "index": 12,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -225,6 +229,37 @@
       "label": "Chauffeur",
       "notation": "standard",
       "originalId": "chauffeur_nom",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "cout_horaire": {
+      "alias": "cout_horaire",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table_Camions.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"cout_horaire\"])) : cout_horaire })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "cout_horaire",
+      "index": 11,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "€/h",
+      "notation": "standard",
+      "originalId": "cout_horaire",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
@@ -523,6 +558,6 @@
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",
-  "widgetId": "vi7f16xbxt",
+  "widgetId": "y6xvzgt80p",
   "widgetName": "Table_Camions"
 }

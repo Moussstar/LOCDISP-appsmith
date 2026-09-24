@@ -31,7 +31,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "mcmcut6z84",
+  "key": "woxktn4n5d",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelText": "Dépôt",
@@ -62,6 +62,6 @@
   "topRow": 53,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "vl34lie3cs",
+  "widgetId": "g10le3bk9c",
   "widgetName": "Select_Camions_depot_id"
 }

@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "x9sey629rh",
+  "key": "b0z9cizdwj",
   "label": "Ville",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 32,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "iqxzxczd9m",
+  "widgetId": "4jejgv36u3",
   "widgetName": "Input_Depots_ville"
 }

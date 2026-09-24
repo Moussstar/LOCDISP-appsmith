@@ -24,7 +24,7 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "lk2c0xp2s2",
+  "key": "61f4lz2ndl",
   "leftColumn": 39,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -51,6 +51,6 @@
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "g687cviyjk",
+  "widgetId": "0lecefeq4x",
   "widgetName": "Text_Camions_Formulaire"
 }

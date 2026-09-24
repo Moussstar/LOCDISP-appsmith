@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "dds54s8ag1",
+  "key": "9r3virb234",
   "label": "Code postal",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 25,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "t5bfz63pnw",
+  "widgetId": "m9m8q3gwy6",
   "widgetName": "Input_Depots_code_postal"
 }

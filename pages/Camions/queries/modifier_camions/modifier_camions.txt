@@ -10,5 +10,6 @@ SET
     chauffeur_nom = NULLIF({{ String(Input_Camions_chauffeur_nom.text ?? '') }}::text, ''),
     heure_debut = COALESCE(NULLIF({{ String(Input_Camions_heure_debut.text ?? '') }}::text, '')::time, heure_debut),
     heure_fin = COALESCE(NULLIF({{ String(Input_Camions_heure_fin.text ?? '') }}::text, '')::time, heure_fin),
+    cout_horaire = COALESCE(NULLIF({{ String(Input_Camions_cout_horaire.text ?? '') }}::text, '')::integer, cout_horaire),
     actif = COALESCE(NULLIF({{ String(Select_Camions_actif.selectedOptionValue ?? '') }}::text, '')::boolean, actif)
 WHERE id = {{ Table_Camions.selectedRow.id }};

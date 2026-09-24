@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6ab0391dd854c0b033fb5f2f_a5b5cdc2-a181-485e-8a0a-c6ac0d67d38e",
-  "id": "Camions_get_camions",
+  "gitSyncId": "6ab0391dd854c0b033fb5f2f_bd9c66b3-ad3c-4d6d-9a3d-1fa7bc8960a9",
+  "id": "Tournees_get_depot",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    ca.id,\n    ca.immatriculation,\n    ca.modele,\n    ca.charge_max_kg,\n    ca.longueur_utile_cm,\n    ca.largeur_utile_cm,\n    ca.hauteur_utile_cm,\n    ca.depot_id,\n    d.nom AS depot,\n    ca.chauffeur_nom,\n    ca.heure_debut,\n    ca.heure_fin,\n    ca.cout_horaire,\n    ca.actif\nFROM camions ca\nLEFT JOIN depots d ON d.id = ca.depot_id\nORDER BY ca.modele;\n",
+      "body": "SELECT nom, latitude, longitude\nFROM depots\nORDER BY id\nLIMIT 1;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "get_camions",
-    "pageId": "Camions",
+    "name": "get_depot",
+    "pageId": "Tournees",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

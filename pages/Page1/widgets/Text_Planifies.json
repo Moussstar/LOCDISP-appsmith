@@ -21,7 +21,7 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "aqyp2rvtaq",
+  "key": "eswa8uvi4r",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -48,6 +48,6 @@
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "6ufzgli4up",
+  "widgetId": "th1seskd0j",
   "widgetName": "Text_Planifies"
 }

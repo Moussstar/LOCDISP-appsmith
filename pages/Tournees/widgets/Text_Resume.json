@@ -24,7 +24,7 @@
   "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "eyy37q9ah8",
+  "key": "yr5wh5zlft",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -51,6 +51,6 @@
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "oi65fdhjk1",
+  "widgetId": "dhgzlc8rpb",
   "widgetName": "Text_Resume"
 }

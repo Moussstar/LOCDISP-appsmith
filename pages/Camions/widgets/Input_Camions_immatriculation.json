@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
-  "key": "y670kmiqd4",
+  "key": "brwifwom0p",
   "label": "Immatriculation *",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "o8pt4mx23s",
+  "widgetId": "av98tncciu",
   "widgetName": "Input_Camions_immatriculation"
 }

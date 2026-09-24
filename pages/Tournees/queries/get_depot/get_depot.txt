@@ -1,0 +1,4 @@
+SELECT nom, latitude, longitude
+FROM depots
+ORDER BY id
+LIMIT 1;

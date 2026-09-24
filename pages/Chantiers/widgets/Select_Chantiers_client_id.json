@@ -31,7 +31,7 @@
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
-  "key": "d4z1g52efu",
+  "key": "mxygj0bk5g",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelText": "Client *",
@@ -62,6 +62,6 @@
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "6g26oc7t3b",
+  "widgetId": "46bku8kbyh",
   "widgetName": "Select_Chantiers_client_id"
 }

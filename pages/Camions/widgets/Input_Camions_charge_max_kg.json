@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
-  "key": "gvjics4i42",
+  "key": "l6b42jhc56",
   "label": "Charge max (kg) *",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 25,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "z6xpyfxobu",
+  "widgetId": "zdszbuf453",
   "widgetName": "Input_Camions_charge_max_kg"
 }

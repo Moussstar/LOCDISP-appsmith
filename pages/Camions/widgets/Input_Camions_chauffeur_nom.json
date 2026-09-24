@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "1z2yvl55x7",
+  "key": "ye2obey694",
   "label": "Chauffeur",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 60,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "qcmswdvrhx",
+  "widgetId": "b0jhkofew3",
   "widgetName": "Input_Camions_chauffeur_nom"
 }

@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "stwg6nj4og",
+  "key": "hls64i4uou",
   "label": "Code postal",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 32,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "9d99vh0w1d",
+  "widgetId": "kgcef9scuo",
   "widgetName": "Input_Chantiers_code_postal"
 }

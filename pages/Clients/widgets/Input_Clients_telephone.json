@@ -26,7 +26,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "tmy4gpywss",
+  "key": "qrwzvqc576",
   "label": "Téléphone",
   "labelAlignment": "left",
   "labelPosition": "Left",
@@ -56,6 +56,6 @@
   "topRow": 25,
   "type": "INPUT_WIDGET_V2",
   "version": 2.0,
-  "widgetId": "s8ke2wt1q3",
+  "widgetId": "vu75kuabbw",
   "widgetName": "Input_Clients_telephone"
 }

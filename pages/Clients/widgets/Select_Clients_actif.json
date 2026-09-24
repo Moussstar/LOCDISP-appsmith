@@ -31,7 +31,7 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "6rkq4svh3e",
+  "key": "njzxbb9af8",
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelText": "Actif",
@@ -62,6 +62,6 @@
   "topRow": 39,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "fsu0lmi8x7",
+  "widgetId": "g9jjy2uj0f",
   "widgetName": "Select_Clients_actif"
 }
