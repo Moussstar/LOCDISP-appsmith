@@ -38,7 +38,7 @@
   "mobileLeftColumn": 38,
   "mobileRightColumn": 52,
   "mobileTopRow": 7,
-  "onClick": "{{ enregistrer_tournees.run().then(() => storeValue('proposition', null)).then(() => Promise.all([get_tournees_du_jour.run(), get_etapes.run()])).then(() => showAlert('Tournées enregistrées', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "onClick": "{{ enregistrer_tournees.run().then(() => storeValue('proposition', null)).then(() => Promise.all([get_tournees_du_jour.run(), get_etapes.run()])).then(() => showAlert('Tournées enregistrées', 'success')).catch(e => showAlert('Enregistrement impossible : ' + (e.message || e), 'error')) }}",
   "originalBottomRow": 11,
   "originalTopRow": 7,
   "parentColumnSpace": 12.578125,

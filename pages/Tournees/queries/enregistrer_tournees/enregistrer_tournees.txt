@@ -1,12 +1,12 @@
--- La proposition part en base64 : le tracé routier encodé contient des
--- caractères (\, ?, `...) qu'Appsmith altère avant de les envoyer. Seuls les
--- champs utiles à appliquer_tournees sont transmis (tous en ASCII).
+-- La proposition part encodée en hexadécimal (octets UTF-8) : le tracé routier
+-- encodé contient des caractères (\, ?, `...) qu'Appsmith altère avant envoi.
+-- Seuls les champs utiles à appliquer_tournees sont transmis.
 SELECT *
 FROM appliquer_tournees(
     {{ appsmith.store.proposition.date }}::date,
-    convert_from(decode({{ btoa(JSON.stringify(appsmith.store.proposition.tournees.map(t => ({
+    convert_from(decode({{ encodeURIComponent(JSON.stringify(appsmith.store.proposition.tournees.map(t => ({
         camion_id: t.camion_id, distance_m: t.distance_m, duree_s: t.duree_s,
         heure_depart: t.heure_depart, heure_retour: t.heure_retour, geometrie: t.geometrie,
         etapes: t.etapes.map(e => ({ ordre_id: e.ordre_id, rang: e.rang, heure_prevue: e.heure_prevue }))
-    })))) }}, 'base64'), 'UTF8')::jsonb
+    })))).replace(/%([0-9A-F]{2})|[^]/g, (c, octet) => octet || c.charCodeAt(0).toString(16).padStart(2, '0')) }}, 'hex'), 'UTF8')::jsonb
 );
