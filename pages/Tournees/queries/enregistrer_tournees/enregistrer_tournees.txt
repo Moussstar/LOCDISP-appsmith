@@ -1,7 +1,12 @@
--- La proposition est passée dans un objet JSON : Appsmith enverrait une liste
--- JSON comme un tableau SQL, que PostgreSQL ne peut pas convertir en jsonb.
+-- La proposition part en base64 : le tracé routier encodé contient des
+-- caractères (\, ?, `...) qu'Appsmith altère avant de les envoyer. Seuls les
+-- champs utiles à appliquer_tournees sont transmis (tous en ASCII).
 SELECT *
 FROM appliquer_tournees(
     {{ appsmith.store.proposition.date }}::date,
-    ({{ JSON.stringify({ tournees: appsmith.store.proposition.tournees }) }}::jsonb) -> 'tournees'
+    convert_from(decode({{ btoa(JSON.stringify(appsmith.store.proposition.tournees.map(t => ({
+        camion_id: t.camion_id, distance_m: t.distance_m, duree_s: t.duree_s,
+        heure_depart: t.heure_depart, heure_retour: t.heure_retour, geometrie: t.geometrie,
+        etapes: t.etapes.map(e => ({ ordre_id: e.ordre_id, rang: e.rang, heure_prevue: e.heure_prevue }))
+    })))) }}, 'base64'), 'UTF8')::jsonb
 );

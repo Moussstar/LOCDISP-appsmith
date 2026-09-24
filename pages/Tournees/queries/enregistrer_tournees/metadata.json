@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "-- La proposition est passée dans un objet JSON : Appsmith enverrait une liste\n-- JSON comme un tableau SQL, que PostgreSQL ne peut pas convertir en jsonb.\nSELECT *\nFROM appliquer_tournees(\n    {{ appsmith.store.proposition.date }}::date,\n    ({{ JSON.stringify({ tournees: appsmith.store.proposition.tournees }) }}::jsonb) -> 'tournees'\n);\n",
+      "body": "-- La proposition part en base64 : le tracé routier encodé contient des\n-- caractères (\\, ?, `...) qu'Appsmith altère avant de les envoyer. Seuls les\n-- champs utiles à appliquer_tournees sont transmis (tous en ASCII).\nSELECT *\nFROM appliquer_tournees(\n    {{ appsmith.store.proposition.date }}::date,\n    convert_from(decode({{ btoa(JSON.stringify(appsmith.store.proposition.tournees.map(t => ({\n        camion_id: t.camion_id, distance_m: t.distance_m, duree_s: t.duree_s,\n        heure_depart: t.heure_depart, heure_retour: t.heure_retour, geometrie: t.geometrie,\n        etapes: t.etapes.map(e => ({ ordre_id: e.ordre_id, rang: e.rang, heure_prevue: e.heure_prevue }))\n    })))) }}, 'base64'), 'UTF8')::jsonb\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
