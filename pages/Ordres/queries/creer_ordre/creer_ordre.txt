@@ -1,4 +1,4 @@
--- Un ordre par matériel sélectionné.
+-- Un ordre par matériel sélectionné (l'option vide « Aucun matériel disponible » est ignorée).
 INSERT INTO ordres_transport (chantier_id, type_action, materiel_id, date_planifiee, date_limite, statut)
 SELECT
     {{ Select_Chantier.selectedOptionValue }}::integer,
@@ -7,4 +7,5 @@ SELECT
     {{ DatePicker_Prevue.formattedDate }}::date,
     NULLIF({{ DatePicker_Limite.formattedDate }}::text, '')::date,
     'a_planifier'
-FROM unnest(string_to_array({{ (Select_Materiels.selectedOptionValues || []).join(',') }}::text, ',')::integer[]) AS materiel_id;
+FROM unnest(string_to_array({{ (Select_Materiels.selectedOptionValues || []).join(',') }}::text, ',', '')::integer[]) AS materiel_id
+WHERE materiel_id IS NOT NULL;

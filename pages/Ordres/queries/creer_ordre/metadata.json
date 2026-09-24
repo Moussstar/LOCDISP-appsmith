@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "-- Un ordre par matériel sélectionné.\nINSERT INTO ordres_transport (chantier_id, type_action, materiel_id, date_planifiee, date_limite, statut)\nSELECT\n    {{ Select_Chantier.selectedOptionValue }}::integer,\n    {{ Select_Type.selectedOptionValue }}::text,\n    materiel_id,\n    {{ DatePicker_Prevue.formattedDate }}::date,\n    NULLIF({{ DatePicker_Limite.formattedDate }}::text, '')::date,\n    'a_planifier'\nFROM unnest(string_to_array({{ (Select_Materiels.selectedOptionValues || []).join(',') }}::text, ',')::integer[]) AS materiel_id;\n",
+      "body": "-- Un ordre par matériel sélectionné (l'option vide « Aucun matériel disponible » est ignorée).\nINSERT INTO ordres_transport (chantier_id, type_action, materiel_id, date_planifiee, date_limite, statut)\nSELECT\n    {{ Select_Chantier.selectedOptionValue }}::integer,\n    {{ Select_Type.selectedOptionValue }}::text,\n    materiel_id,\n    {{ DatePicker_Prevue.formattedDate }}::date,\n    NULLIF({{ DatePicker_Limite.formattedDate }}::text, '')::date,\n    'a_planifier'\nFROM unnest(string_to_array({{ (Select_Materiels.selectedOptionValues || []).join(',') }}::text, ',', '')::integer[]) AS materiel_id\nWHERE materiel_id IS NOT NULL;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
