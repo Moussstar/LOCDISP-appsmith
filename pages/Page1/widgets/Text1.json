@@ -44,7 +44,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{ (() => { const o = Table_Ordres.selectedRow; const c = (get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue)); if (!o || !o.ordre_id) return ''; return '**Ordre ' + o.ordre_id + '** : ' + (o.materiel || '?') + ' (' + o.poids_kg + ' kg, ' + o.longueur_cm + ' x ' + o.largeur_cm + ' x ' + o.hauteur_cm + ' cm)' + (c ? '  \\n**Camion** : ' + c.charge_max_kg + ' kg, ' + c.longueur_utile_cm + ' x ' + c.largeur_utile_cm + ' x ' + c.hauteur_utile_cm + ' cm' : ''); })() }}",
+  "text": "{{ (() => { const o = Table_Ordres.selectedRow; const c = (get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue)); if (!o || !o.ordre_id) return ''; return 'Ordre ' + o.ordre_id + ' : ' + (o.materiel || '?') + ' (' + o.poids_kg + ' kg, ' + o.longueur_cm + ' x ' + o.largeur_cm + ' x ' + o.hauteur_cm + ' cm)' + (c ? ' · Camion : ' + c.charge_max_kg + ' kg, ' + c.longueur_utile_cm + ' x ' + c.largeur_utile_cm + ' x ' + c.hauteur_utile_cm + ' cm' : ''); })() }}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 41,

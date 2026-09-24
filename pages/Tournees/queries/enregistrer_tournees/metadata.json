@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM appliquer_tournees(\n    {{ DatePicker_Tournee.formattedDate }}::date,\n    {{ JSON.stringify(appsmith.store.proposition.tournees) }}::jsonb\n);\n",
+      "body": "-- La proposition est passée dans un objet JSON : Appsmith enverrait une liste\n-- JSON comme un tableau SQL, que PostgreSQL ne peut pas convertir en jsonb.\nSELECT *\nFROM appliquer_tournees(\n    {{ appsmith.store.proposition.date }}::date,\n    ({{ JSON.stringify({ tournees: appsmith.store.proposition.tournees }) }}::jsonb) -> 'tournees'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

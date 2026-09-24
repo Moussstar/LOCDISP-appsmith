@@ -1,5 +1,7 @@
+-- La proposition est passée dans un objet JSON : Appsmith enverrait une liste
+-- JSON comme un tableau SQL, que PostgreSQL ne peut pas convertir en jsonb.
 SELECT *
 FROM appliquer_tournees(
-    {{ DatePicker_Tournee.formattedDate }}::date,
-    {{ JSON.stringify(appsmith.store.proposition.tournees) }}::jsonb
+    {{ appsmith.store.proposition.date }}::date,
+    ({{ JSON.stringify({ tournees: appsmith.store.proposition.tournees }) }}::jsonb) -> 'tournees'
 );
