@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 95,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ Table_Tournees.selectedRow.statut !== 'planifiee' }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "eepzhpcf07",
+  "leftColumn": 30,
+  "minWidth": 120.0,
+  "mobileBottomRow": 95,
+  "mobileLeftColumn": 30,
+  "mobileRightColumn": 44,
+  "mobileTopRow": 91,
+  "onClick": "{{ annuler_tournee.run().then(() => Promise.all([get_tournees_du_jour.run(), get_etapes.run()])).then(() => showAlert('Tournée annulée', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 95,
+  "originalTopRow": 91,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 44,
+  "text": "Annuler la tournée",
+  "topRow": 91,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "dd467kd6fl",
+  "widgetName": "Button_Annuler_Tournee"
+}

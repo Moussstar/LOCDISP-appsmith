@@ -1,0 +1,1 @@
+SELECT terminer_tournee({{ Table_Tournees.selectedRow.id }});

@@ -1,0 +1,26 @@
+SELECT
+    t.id AS tournee_id,
+    ca.modele || ' (' || ca.immatriculation || ')' AS camion,
+    ot.ordre_passage AS rang,
+    ot.heure_prevue,
+    ot.type_action,
+    c.nom_entreprise AS client,
+    ch.nom_chantier AS chantier,
+    concat_ws(', ', ch.adresse, concat_ws(' ', ch.code_postal, ch.ville)) AS adresse,
+    ch.contact_sur_site,
+    ch.telephone_sur_site,
+    ch.instructions_acces,
+    m.nom AS materiel,
+    m.poids_kg,
+    ch.latitude,
+    ch.longitude,
+    ot.id AS ordre_id,
+    ot.statut
+FROM tournees t
+JOIN camions ca ON ca.id = t.camion_id
+JOIN ordres_transport ot ON ot.tournee_id = t.id
+LEFT JOIN chantiers ch ON ch.id = ot.chantier_id
+LEFT JOIN clients c ON c.id = ch.client_id
+LEFT JOIN materiels m ON m.id = ot.materiel_id
+WHERE t.date_tournee = {{ DatePicker_Tournee.formattedDate }}::date
+ORDER BY t.heure_depart, ot.ordre_passage;

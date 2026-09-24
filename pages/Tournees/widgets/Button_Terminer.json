@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 95,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ Table_Tournees.selectedRow.statut !== 'en_cours' }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "95jmsnd8du",
+  "leftColumn": 15,
+  "minWidth": 120.0,
+  "mobileBottomRow": 95,
+  "mobileLeftColumn": 15,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 91,
+  "onClick": "{{ terminer_tournee.run().then(() => Promise.all([get_tournees_du_jour.run(), get_etapes.run()])).then(() => showAlert('Tournée terminée', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 95,
+  "originalTopRow": 91,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 29,
+  "text": "Terminer",
+  "topRow": 91,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "zdkyayq3s1",
+  "widgetName": "Button_Terminer"
+}

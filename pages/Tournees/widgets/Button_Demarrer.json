@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 95,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ Table_Tournees.selectedRow.statut !== 'planifiee' }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "d8afpk054n",
+  "leftColumn": 0,
+  "minWidth": 120.0,
+  "mobileBottomRow": 95,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 14,
+  "mobileTopRow": 91,
+  "onClick": "{{ demarrer_tournee.run().then(() => Promise.all([get_tournees_du_jour.run(), get_etapes.run()])).then(() => showAlert('Tournée démarrée', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 95,
+  "originalTopRow": 91,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 14,
+  "text": "Démarrer",
+  "topRow": 91,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "i1lr3pe29g",
+  "widgetName": "Button_Demarrer"
+}

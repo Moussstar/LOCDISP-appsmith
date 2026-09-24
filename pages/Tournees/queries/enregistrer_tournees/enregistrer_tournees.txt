@@ -1,0 +1,5 @@
+SELECT *
+FROM appliquer_tournees(
+    {{ DatePicker_Tournee.formattedDate }}::date,
+    {{ JSON.stringify(appsmith.store.proposition.tournees) }}::jsonb
+);

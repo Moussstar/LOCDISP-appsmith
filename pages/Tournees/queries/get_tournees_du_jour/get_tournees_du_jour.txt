@@ -1,0 +1,15 @@
+SELECT
+    t.id,
+    ca.modele || ' (' || ca.immatriculation || ')' AS camion,
+    ca.chauffeur_nom AS chauffeur,
+    t.statut,
+    t.heure_depart,
+    t.heure_retour,
+    ROUND(t.distance_m / 1000.0, 1) AS distance_km,
+    COUNT(ot.id) AS nb_arrets
+FROM tournees t
+JOIN camions ca ON ca.id = t.camion_id
+LEFT JOIN ordres_transport ot ON ot.tournee_id = t.id
+WHERE t.date_tournee = {{ DatePicker_Tournee.formattedDate }}::date
+GROUP BY t.id, ca.modele, ca.immatriculation, ca.chauffeur_nom
+ORDER BY t.heure_depart;

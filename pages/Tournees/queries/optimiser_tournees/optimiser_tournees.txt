@@ -1,0 +1,3 @@
+{
+  "date": "{{ DatePicker_Tournee.formattedDate }}"
+}
