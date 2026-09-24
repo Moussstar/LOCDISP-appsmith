@@ -1,0 +1,8 @@
+UPDATE clients
+SET
+    nom_entreprise = NULLIF({{ String(Input_Clients_nom_entreprise.text ?? '') }}::text, ''),
+    nom_contact = NULLIF({{ String(Input_Clients_nom_contact.text ?? '') }}::text, ''),
+    telephone = NULLIF({{ String(Input_Clients_telephone.text ?? '') }}::text, ''),
+    email = NULLIF({{ String(Input_Clients_email.text ?? '') }}::text, ''),
+    actif = COALESCE(NULLIF({{ String(Select_Clients_actif.selectedOptionValue ?? '') }}::text, '')::boolean, actif)
+WHERE id = {{ Table_Clients.selectedRow.id }};

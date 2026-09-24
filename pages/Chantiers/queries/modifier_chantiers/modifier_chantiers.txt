@@ -1,0 +1,14 @@
+UPDATE chantiers
+SET
+    client_id = NULLIF({{ String(Select_Chantiers_client_id.selectedOptionValue ?? '') }}::text, '')::integer,
+    nom_chantier = NULLIF({{ String(Input_Chantiers_nom_chantier.text ?? '') }}::text, ''),
+    adresse = NULLIF({{ String(Input_Chantiers_adresse.text ?? '') }}::text, ''),
+    code_postal = NULLIF({{ String(Input_Chantiers_code_postal.text ?? '') }}::text, ''),
+    ville = NULLIF({{ String(Input_Chantiers_ville.text ?? '') }}::text, ''),
+    heure_ouverture = COALESCE(NULLIF({{ String(Input_Chantiers_heure_ouverture.text ?? '') }}::text, '')::time, heure_ouverture),
+    heure_fermeture = COALESCE(NULLIF({{ String(Input_Chantiers_heure_fermeture.text ?? '') }}::text, '')::time, heure_fermeture),
+    contact_sur_site = NULLIF({{ String(Input_Chantiers_contact_sur_site.text ?? '') }}::text, ''),
+    telephone_sur_site = NULLIF({{ String(Input_Chantiers_telephone_sur_site.text ?? '') }}::text, ''),
+    instructions_acces = NULLIF({{ String(Input_Chantiers_instructions_acces.text ?? '') }}::text, ''),
+    statut = COALESCE(NULLIF({{ String(Select_Chantiers_statut.selectedOptionValue ?? '') }}::text, ''), statut)
+WHERE id = {{ Table_Chantiers.selectedRow.id }};

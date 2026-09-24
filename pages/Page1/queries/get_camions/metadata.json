@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    id, \n    immatriculation, \n    modele, \n    charge_max_kg, \n    longueur_utile_cm, \n    largeur_utile_cm, \n    hauteur_utile_cm,\n    -- Création d'un libellé personnalisé complet :\n    modele || ' (' || immatriculation || ') - Capacité: ' || charge_max_kg || ' kg' AS label_affiche\nFROM camions;",
+      "body": "SELECT\n    id,\n    immatriculation,\n    modele,\n    charge_max_kg,\n    longueur_utile_cm,\n    largeur_utile_cm,\n    hauteur_utile_cm,\n    modele || ' (' || immatriculation || ') - ' || charge_max_kg || ' kg' AS label_affiche\nFROM camions\nWHERE actif\nORDER BY modele;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -1,0 +1,12 @@
+INSERT INTO materiels (reference, nom, categorie, longueur_cm, largeur_cm, hauteur_cm, poids_kg, duree_manutention_min, depot_id)
+VALUES (
+    NULLIF({{ String(Input_Parc_reference.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Parc_nom.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Parc_categorie.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Parc_longueur_cm.text ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Parc_largeur_cm.text ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Parc_hauteur_cm.text ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Parc_poids_kg.text ?? '') }}::text, '')::integer,
+    COALESCE(NULLIF({{ String(Input_Parc_duree_manutention_min.text ?? '') }}::text, '')::integer, '15'),
+    NULLIF({{ String(Select_Parc_depot_id.selectedOptionValue ?? '') }}::text, '')::integer
+);

@@ -1,5 +1,10 @@
+-- Le matériel reste sur l'ordre : il fait partie de la demande.
 UPDATE ordres_transport
-SET 
+SET
     camion_id = NULL,
+    tournee_id = NULL,
+    ordre_passage = NULL,
+    heure_prevue = NULL,
     statut = 'a_planifier'
-WHERE id = {{ Table_Planifies.triggeredRow ? Table_Planifies.triggeredRow.ordre_id : (Table_Planifies.selectedRow ? Table_Planifies.selectedRow.ordre_id : null) }};
+WHERE id = {{ Table_Planifies.selectedRow.ordre_id }}
+  AND statut = 'planifie';

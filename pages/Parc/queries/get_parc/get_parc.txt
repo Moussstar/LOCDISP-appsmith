@@ -1,0 +1,4 @@
+SELECT p.*, m.duree_manutention_min
+FROM v_parc p
+JOIN materiels m ON m.id = p.id
+ORDER BY p.categorie, p.nom;

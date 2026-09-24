@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    ot.id AS ordre_id,\n    c.nom_entreprise AS client,\n    ch.nom_chantier AS chantier,\n    m.nom AS materiel,\n    m.poids_kg,\n    ca.modele || ' (' || ca.immatriculation || ')' AS camion_assigne,\n    ot.type_action,\n    ot.date_planifiee,\n    ot.statut\nFROM ordres_transport ot\nJOIN chantiers ch ON ot.chantier_id = ch.id\nJOIN clients c ON ch.client_id = c.id\nJOIN materiels m ON ot.materiel_id = m.id\nJOIN camions ca ON ot.camion_id = ca.id\nWHERE ot.statut = 'planifie'\nORDER BY ot.date_planifiee DESC;",
+      "body": "SELECT\n    ot.id AS ordre_id,\n    c.nom_entreprise AS client,\n    ch.nom_chantier AS chantier,\n    m.nom AS materiel,\n    m.poids_kg,\n    ot.camion_id,\n    ca.modele || ' (' || ca.immatriculation || ')' AS camion_assigne,\n    ot.type_action,\n    ot.date_planifiee,\n    ot.ordre_passage,\n    ot.tournee_id,\n    ot.statut\nFROM ordres_transport ot\nLEFT JOIN chantiers ch ON ot.chantier_id = ch.id\nLEFT JOIN clients c ON ch.client_id = c.id\nLEFT JOIN materiels m ON ot.materiel_id = m.id\nLEFT JOIN camions ca ON ot.camion_id = ca.id\nWHERE ot.statut = 'planifie'\nORDER BY ot.date_planifiee DESC, ot.camion_id, ot.ordre_passage;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000

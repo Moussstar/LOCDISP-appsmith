@@ -1,0 +1,4 @@
+SELECT id, nom_entreprise
+FROM clients
+WHERE actif
+ORDER BY nom_entreprise;

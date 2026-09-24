@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    ot.id AS ordre_id,\n    c.nom_entreprise AS client,\n    ch.nom_chantier AS chantier,\n    ot.type_action,\n    ot.statut\nFROM ordres_transport ot\nLEFT JOIN chantiers ch ON ot.chantier_id = ch.id\nLEFT JOIN clients c ON ch.client_id = c.id\nWHERE ot.statut = 'a_planifier'\nORDER BY ot.id ASC;",
+      "body": "SELECT\n    ot.id AS ordre_id,\n    c.nom_entreprise AS client,\n    ch.nom_chantier AS chantier,\n    ot.type_action,\n    m.nom AS materiel,\n    m.poids_kg,\n    m.longueur_cm,\n    m.largeur_cm,\n    m.hauteur_cm,\n    ot.date_planifiee,\n    ot.date_limite,\n    ot.statut\nFROM ordres_transport ot\nLEFT JOIN chantiers ch ON ot.chantier_id = ch.id\nLEFT JOIN clients c ON ch.client_id = c.id\nLEFT JOIN materiels m ON m.id = ot.materiel_id\nWHERE ot.statut = 'a_planifier'\nORDER BY COALESCE(ot.date_limite, ot.date_planifiee), ot.id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

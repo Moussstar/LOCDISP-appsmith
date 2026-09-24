@@ -1,0 +1,3 @@
+SELECT id, nom_entreprise, nom_contact, telephone, email, actif
+FROM clients
+ORDER BY nom_entreprise;

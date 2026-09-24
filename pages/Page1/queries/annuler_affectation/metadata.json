@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE ordres_transport\nSET \n    camion_id = NULL,\n    statut = 'a_planifier'\nWHERE id = {{ Table_Planifies.triggeredRow ? Table_Planifies.triggeredRow.ordre_id : (Table_Planifies.selectedRow ? Table_Planifies.selectedRow.ordre_id : null) }};",
+      "body": "-- Le matériel reste sur l'ordre : il fait partie de la demande.\nUPDATE ordres_transport\nSET\n    camion_id = NULL,\n    tournee_id = NULL,\n    ordre_passage = NULL,\n    heure_prevue = NULL,\n    statut = 'a_planifier'\nWHERE id = {{ Table_Planifies.selectedRow.ordre_id }}\n  AND statut = 'planifie';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000

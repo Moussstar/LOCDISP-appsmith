@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE ordres_transport\nSET \n    materiel_id = {{ Select_Materiel.selectedOptionValues && Select_Materiel.selectedOptionValues.length > 0 ? Select_Materiel.selectedOptionValues[0] : 'NULL' }},\n    camion_id = {{ Select_Camion.selectedOptionValue }},\n    statut = 'planifie'\nWHERE id = {{ Table_Ordres.selectedRow.ordre_id }};",
+      "body": "-- Le matériel est déjà porté par l'ordre : on n'affecte que le camion.\nUPDATE ordres_transport\nSET\n    camion_id = {{ Select_Camion.selectedOptionValue }}::integer,\n    statut = 'planifie'\nWHERE id = {{ Table_Ordres.selectedRow.ordre_id }}\n  AND statut = 'a_planifier';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000

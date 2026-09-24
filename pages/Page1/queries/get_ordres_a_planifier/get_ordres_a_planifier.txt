@@ -1,11 +1,19 @@
-SELECT 
+SELECT
     ot.id AS ordre_id,
     c.nom_entreprise AS client,
     ch.nom_chantier AS chantier,
     ot.type_action,
+    m.nom AS materiel,
+    m.poids_kg,
+    m.longueur_cm,
+    m.largeur_cm,
+    m.hauteur_cm,
+    ot.date_planifiee,
+    ot.date_limite,
     ot.statut
 FROM ordres_transport ot
 LEFT JOIN chantiers ch ON ot.chantier_id = ch.id
 LEFT JOIN clients c ON ch.client_id = c.id
+LEFT JOIN materiels m ON m.id = ot.materiel_id
 WHERE ot.statut = 'a_planifier'
-ORDER BY ot.id ASC;
+ORDER BY COALESCE(ot.date_limite, ot.date_planifiee), ot.id;

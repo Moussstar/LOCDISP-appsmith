@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 66,
+  "boxShadow": "none",
+  "defaultText": "{{ appsmith.store.nouveau_parc ? '15' : (Table_Parc.selectedRow.duree_manutention_min ?? '') }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "eka024scos",
+  "label": "Manutention (min)",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 7,
+  "leftColumn": 39,
+  "maxDynamicHeight": 9000.0,
+  "minDynamicHeight": 4.0,
+  "minWidth": 450.0,
+  "mobileBottomRow": 66,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 60,
+  "originalBottomRow": 66,
+  "originalTopRow": 60,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placeholderText": "",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldAllowAutofill": true,
+  "showStepArrows": false,
+  "topRow": 60,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2.0,
+  "widgetId": "dgnnqfkpl9",
+  "widgetName": "Input_Parc_duree_manutention_min"
+}

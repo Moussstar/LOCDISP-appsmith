@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 44,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Input_Depots_nom.text || (!appsmith.store.nouveau_depots && !Table_Depots.selectedRow.id) }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "z6ccciv473",
+  "leftColumn": 39,
+  "minWidth": 120.0,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 40,
+  "onClick": "{{ (appsmith.store.nouveau_depots ? inserer_depots.run() : modifier_depots.run()).then(() => storeValue('nouveau_depots', false)).then(() => Promise.all([get_depots.run()])).then(() => showAlert('Enregistré', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 44,
+  "originalTopRow": 40,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Enregistrer",
+  "topRow": 40,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "igzxv9xjm6",
+  "widgetName": "Button_Depots_Enregistrer"
+}

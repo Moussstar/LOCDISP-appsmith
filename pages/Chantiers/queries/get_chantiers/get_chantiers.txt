@@ -1,0 +1,20 @@
+SELECT
+    ch.id,
+    ch.client_id,
+    c.nom_entreprise AS client,
+    ch.nom_chantier,
+    ch.adresse,
+    ch.code_postal,
+    ch.ville,
+    ch.heure_ouverture,
+    ch.heure_fermeture,
+    ch.contact_sur_site,
+    ch.telephone_sur_site,
+    ch.instructions_acces,
+    ch.statut,
+    ch.latitude,
+    ch.longitude,
+    (ch.latitude IS NOT NULL) AS geolocalise
+FROM chantiers ch
+LEFT JOIN clients c ON c.id = ch.client_id
+ORDER BY c.nom_entreprise, ch.nom_chantier;

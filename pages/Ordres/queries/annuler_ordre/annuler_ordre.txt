@@ -1,0 +1,6 @@
+-- Seuls les ordres pas encore partis peuvent être annulés.
+-- Un ordre annulé sort de sa tournée (recalculée à la prochaine optimisation).
+UPDATE ordres_transport
+SET statut = 'annule', tournee_id = NULL, ordre_passage = NULL, heure_prevue = NULL
+WHERE id = {{ Table_Ordres.selectedRow.ordre_id }}
+  AND statut IN ('a_planifier', 'planifie');

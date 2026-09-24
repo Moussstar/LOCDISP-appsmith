@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "defaultText": "{{ appsmith.store.nouveau_depots ? '' : (Table_Depots.selectedRow.code_postal ?? '') }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dds54s8ag1",
+  "label": "Code postal",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 7,
+  "leftColumn": 39,
+  "maxDynamicHeight": 9000.0,
+  "minDynamicHeight": 4.0,
+  "minWidth": 450.0,
+  "mobileBottomRow": 31,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 25,
+  "originalBottomRow": 31,
+  "originalTopRow": 25,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placeholderText": "",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldAllowAutofill": true,
+  "showStepArrows": false,
+  "topRow": 25,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2.0,
+  "widgetId": "t5bfz63pnw",
+  "widgetName": "Input_Depots_code_postal"
+}

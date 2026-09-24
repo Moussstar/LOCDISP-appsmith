@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 85,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ Table_Parc.selectedRow.statut !== 'maintenance' }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "0foh3hj5s6",
+  "leftColumn": 52,
+  "minWidth": 120.0,
+  "mobileBottomRow": 85,
+  "mobileLeftColumn": 52,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 81,
+  "onClick": "{{ remettre_au_depot.run().then(() => Promise.all([get_parc.run()])).then(() => showAlert('Matériel disponible au dépôt', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 85,
+  "originalTopRow": 81,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Remettre au dépôt",
+  "topRow": 81,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "25hbpkt9a9",
+  "widgetName": "Button_Retour_Depot"
+}

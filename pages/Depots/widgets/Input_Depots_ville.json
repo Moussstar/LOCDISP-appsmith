@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 38,
+  "boxShadow": "none",
+  "defaultText": "{{ appsmith.store.nouveau_depots ? '' : (Table_Depots.selectedRow.ville ?? '') }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "x9sey629rh",
+  "label": "Ville",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 7,
+  "leftColumn": 39,
+  "maxDynamicHeight": 9000.0,
+  "minDynamicHeight": 4.0,
+  "minWidth": 450.0,
+  "mobileBottomRow": 38,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 32,
+  "originalBottomRow": 38,
+  "originalTopRow": 32,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placeholderText": "",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldAllowAutofill": true,
+  "showStepArrows": false,
+  "topRow": 32,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2.0,
+  "widgetId": "iqxzxczd9m",
+  "widgetName": "Input_Depots_ville"
+}

@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 95,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Table_Planifies.selectedRow.ordre_id }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "xehd96m8jk",
+  "leftColumn": 0,
+  "minWidth": 120.0,
+  "mobileBottomRow": 95,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 91,
+  "onClick": "{{ annuler_affectation.run().then(() => Promise.all([get_ordres_a_planifier.run(), get_ordres_planifies.run()])).then(() => showAlert('Affectation annulée', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 95,
+  "originalTopRow": 91,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 16,
+  "text": "Annuler l'affectation",
+  "topRow": 91,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "0948npf727",
+  "widgetName": "Button_Annuler"
+}

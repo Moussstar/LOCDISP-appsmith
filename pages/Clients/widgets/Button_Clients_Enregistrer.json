@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 51,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Input_Clients_nom_entreprise.text || (!appsmith.store.nouveau_clients && !Table_Clients.selectedRow.id) }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "h3xqyxgo4b",
+  "leftColumn": 39,
+  "minWidth": 120.0,
+  "mobileBottomRow": 51,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 47,
+  "onClick": "{{ (appsmith.store.nouveau_clients ? inserer_clients.run() : modifier_clients.run()).then(() => storeValue('nouveau_clients', false)).then(() => Promise.all([get_clients.run()])).then(() => showAlert('Enregistré', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 51,
+  "originalTopRow": 47,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Enregistrer",
+  "topRow": 47,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "joz9xfzaq8",
+  "widgetName": "Button_Clients_Enregistrer"
+}

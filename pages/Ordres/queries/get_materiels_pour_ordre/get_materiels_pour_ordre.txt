@@ -1,0 +1,21 @@
+-- Livraison : matériels au dépôt.
+-- Ramassage : matériels loués sur le chantier choisi.
+-- Dans les deux cas, on exclut ceux déjà engagés dans un ordre du même type.
+SELECT
+    m.id,
+    m.nom,
+    m.poids_kg,
+    m.nom || ' (' || m.poids_kg || ' kg)' AS label_affiche
+FROM materiels m
+WHERE CASE {{ Select_Type.selectedOptionValue }}::text
+        WHEN 'ramassage' THEN m.statut = 'loue'
+                              AND m.chantier_id::text = {{ String(Select_Chantier.selectedOptionValue || '') }}::text
+        ELSE m.statut = 'au_depot'
+      END
+  AND NOT EXISTS (
+      SELECT 1 FROM ordres_transport ot
+      WHERE ot.materiel_id = m.id
+        AND ot.type_action = {{ Select_Type.selectedOptionValue }}::text
+        AND ot.statut IN ('a_planifier', 'planifie', 'en_cours')
+  )
+ORDER BY m.nom;

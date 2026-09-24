@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 85,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !['a_planifier', 'planifie'].includes(Table_Ordres.selectedRow.statut) }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "awty088o5o",
+  "leftColumn": 0,
+  "minWidth": 120.0,
+  "mobileBottomRow": 85,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 81,
+  "onClick": "{{ annuler_ordre.run().then(() => Promise.all([get_ordres.run(), get_materiels_pour_ordre.run()])).then(() => showAlert('Ordre annulé', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 85,
+  "originalTopRow": 81,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 16,
+  "text": "Annuler l'ordre",
+  "topRow": 81,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "830dn0yby4",
+  "widgetName": "Button_Annuler_Ordre"
+}

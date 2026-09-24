@@ -1,0 +1,14 @@
+UPDATE camions
+SET
+    immatriculation = NULLIF({{ String(Input_Camions_immatriculation.text ?? '') }}::text, ''),
+    modele = NULLIF({{ String(Input_Camions_modele.text ?? '') }}::text, ''),
+    charge_max_kg = NULLIF({{ String(Input_Camions_charge_max_kg.text ?? '') }}::text, '')::integer,
+    longueur_utile_cm = NULLIF({{ String(Input_Camions_longueur_utile_cm.text ?? '') }}::text, '')::integer,
+    largeur_utile_cm = NULLIF({{ String(Input_Camions_largeur_utile_cm.text ?? '') }}::text, '')::integer,
+    hauteur_utile_cm = NULLIF({{ String(Input_Camions_hauteur_utile_cm.text ?? '') }}::text, '')::integer,
+    depot_id = NULLIF({{ String(Select_Camions_depot_id.selectedOptionValue ?? '') }}::text, '')::integer,
+    chauffeur_nom = NULLIF({{ String(Input_Camions_chauffeur_nom.text ?? '') }}::text, ''),
+    heure_debut = COALESCE(NULLIF({{ String(Input_Camions_heure_debut.text ?? '') }}::text, '')::time, heure_debut),
+    heure_fin = COALESCE(NULLIF({{ String(Input_Camions_heure_fin.text ?? '') }}::text, '')::time, heure_fin),
+    actif = COALESCE(NULLIF({{ String(Select_Camions_actif.selectedOptionValue ?? '') }}::text, '')::boolean, actif)
+WHERE id = {{ Table_Camions.selectedRow.id }};

@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 59,
+  "boxShadow": "none",
+  "defaultText": "{{ appsmith.store.nouveau_chantiers ? '17:00' : (Table_Chantiers.selectedRow.heure_fermeture ?? '') }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "hw1hs57tco",
+  "label": "Fermeture",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 7,
+  "leftColumn": 39,
+  "maxDynamicHeight": 9000.0,
+  "minDynamicHeight": 4.0,
+  "minWidth": 450.0,
+  "mobileBottomRow": 59,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 53,
+  "originalBottomRow": 59,
+  "originalTopRow": 53,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placeholderText": "HH:MM",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldAllowAutofill": true,
+  "showStepArrows": false,
+  "topRow": 53,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2.0,
+  "widgetId": "fr21520rn6",
+  "widgetName": "Input_Chantiers_heure_fermeture"
+}

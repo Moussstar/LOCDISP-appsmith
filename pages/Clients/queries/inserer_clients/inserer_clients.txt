@@ -1,0 +1,8 @@
+INSERT INTO clients (nom_entreprise, nom_contact, telephone, email, actif)
+VALUES (
+    NULLIF({{ String(Input_Clients_nom_entreprise.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Clients_nom_contact.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Clients_telephone.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Clients_email.text ?? '') }}::text, ''),
+    COALESCE(NULLIF({{ String(Select_Clients_actif.selectedOptionValue ?? '') }}::text, '')::boolean, TRUE)
+);

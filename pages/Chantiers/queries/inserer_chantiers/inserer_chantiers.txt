@@ -1,0 +1,14 @@
+INSERT INTO chantiers (client_id, nom_chantier, adresse, code_postal, ville, heure_ouverture, heure_fermeture, contact_sur_site, telephone_sur_site, instructions_acces, statut)
+VALUES (
+    NULLIF({{ String(Select_Chantiers_client_id.selectedOptionValue ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Chantiers_nom_chantier.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Chantiers_adresse.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Chantiers_code_postal.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Chantiers_ville.text ?? '') }}::text, ''),
+    COALESCE(NULLIF({{ String(Input_Chantiers_heure_ouverture.text ?? '') }}::text, '')::time, '07:00'),
+    COALESCE(NULLIF({{ String(Input_Chantiers_heure_fermeture.text ?? '') }}::text, '')::time, '17:00'),
+    NULLIF({{ String(Input_Chantiers_contact_sur_site.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Chantiers_telephone_sur_site.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Chantiers_instructions_acces.text ?? '') }}::text, ''),
+    COALESCE(NULLIF({{ String(Select_Chantiers_statut.selectedOptionValue ?? '') }}::text, ''), 'actif')
+);

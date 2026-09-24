@@ -1,0 +1,19 @@
+SELECT
+    ot.id AS ordre_id,
+    ot.type_action,
+    c.nom_entreprise AS client,
+    ch.nom_chantier AS chantier,
+    m.nom AS materiel,
+    m.poids_kg,
+    ot.date_planifiee,
+    ot.date_limite,
+    ot.statut,
+    ca.modele || ' (' || ca.immatriculation || ')' AS camion,
+    ot.heure_prevue
+FROM ordres_transport ot
+LEFT JOIN chantiers ch ON ch.id = ot.chantier_id
+LEFT JOIN clients c ON c.id = ch.client_id
+LEFT JOIN materiels m ON m.id = ot.materiel_id
+LEFT JOIN camions ca ON ca.id = ot.camion_id
+WHERE ot.statut IN ('a_planifier', 'planifie', 'en_cours')
+ORDER BY ot.date_planifiee, ot.id;

@@ -1,6 +1,7 @@
+-- Le matériel est déjà porté par l'ordre : on n'affecte que le camion.
 UPDATE ordres_transport
-SET 
-    materiel_id = {{ Select_Materiel.selectedOptionValues && Select_Materiel.selectedOptionValues.length > 0 ? Select_Materiel.selectedOptionValues[0] : 'NULL' }},
-    camion_id = {{ Select_Camion.selectedOptionValue }},
+SET
+    camion_id = {{ Select_Camion.selectedOptionValue }}::integer,
     statut = 'planifie'
-WHERE id = {{ Table_Ordres.selectedRow.ordre_id }};
+WHERE id = {{ Table_Ordres.selectedRow.ordre_id }}
+  AND statut = 'a_planifier';

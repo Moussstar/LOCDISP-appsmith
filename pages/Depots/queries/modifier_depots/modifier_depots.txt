@@ -1,0 +1,7 @@
+UPDATE depots
+SET
+    nom = NULLIF({{ String(Input_Depots_nom.text ?? '') }}::text, ''),
+    adresse = NULLIF({{ String(Input_Depots_adresse.text ?? '') }}::text, ''),
+    code_postal = NULLIF({{ String(Input_Depots_code_postal.text ?? '') }}::text, ''),
+    ville = NULLIF({{ String(Input_Depots_ville.text ?? '') }}::text, '')
+WHERE id = {{ Table_Depots.selectedRow.id }};

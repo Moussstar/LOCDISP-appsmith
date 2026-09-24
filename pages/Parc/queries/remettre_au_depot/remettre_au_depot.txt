@@ -1,0 +1,4 @@
+UPDATE materiels
+SET statut = 'au_depot'
+WHERE id = {{ Table_Parc.selectedRow.id }}
+  AND statut = 'maintenance';

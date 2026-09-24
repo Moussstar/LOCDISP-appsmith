@@ -1,55 +1,56 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 51,
   "dynamicBindingPathList": [
     {
-      "key": "truncateButtonColor"
+      "key": "borderRadius"
     },
     {
       "key": "fontFamily"
     },
     {
-      "key": "borderRadius"
+      "key": "text"
     },
     {
-      "key": "text"
+      "key": "truncateButtonColor"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "ojywfpjcvx",
-  "leftColumn": 1,
+  "key": "9k044msusd",
+  "leftColumn": 31,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 51,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 41,
   "needsErrorInfo": false,
-  "originalBottomRow": 17,
-  "originalTopRow": 2,
-  "overflow": "NONE",
+  "originalBottomRow": 51,
+  "originalTopRow": 41,
+  "overflow": "SCROLL",
   "parentColumnSpace": 20.25,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 30,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "### 🚛 Vérification de Capacité\n\n**Ordre sélectionné :** {{ Table_Ordres.selectedRow ? Table_Ordres.selectedRow.ordre_id : \"Aucun\" }}\n**Poids total des matériels :** {{ \n  (Select_Materiel.selectedOptionValues || []).reduce((sum, selectedVal) => {\n    let item = (get_materiels_disponibles.data || []).find(m => String(m.id) === String(selectedVal));\n    let valPoids = item ? (item.poids_kg ?? item.poids ?? item.weight ?? 0) : 0;\n    return sum + Number(valPoids);\n  }, 0)\n}} kg\n**Charge max du camion :** {{ Select_Camion.selectedOptionValue ? ((get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue))?.charge_utile_kg || (get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue))?.charge_max_kg || 0) : 0 }} kg\n\n**Statut charge :** {{ \n  !Select_Camion.selectedOptionValue \n    ? \"Veuillez sélectionner un camion\" \n    : (!Select_Materiel.selectedOptionValues || Select_Materiel.selectedOptionValues.length === 0)\n      ? \"Veuillez sélectionner au moins un matériel\"\n      : (((Select_Materiel.selectedOptionValues || []).reduce((sum, selectedVal) => {\n            let item = (get_materiels_disponibles.data || []).find(m => String(m.id) === String(selectedVal));\n            let valPoids = item ? (item.poids_kg ?? item.poids ?? item.weight ?? 0) : 0;\n            return sum + Number(valPoids);\n          }, 0)) <= ((get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue))?.charge_utile_kg || (get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue))?.charge_max_kg || 0))\n        ? \"✅ Poids conforme\" \n        : \"⚠️ SURCHARGE DÉTECTÉE !\" \n}}",
+  "text": "{{ (() => { const o = Table_Ordres.selectedRow; const c = (get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue)); if (!o || !o.ordre_id) return ''; return '**Ordre ' + o.ordre_id + '** : ' + (o.materiel || '?') + ' (' + o.poids_kg + ' kg, ' + o.longueur_cm + ' x ' + o.largeur_cm + ' x ' + o.hauteur_cm + ' cm)' + (c ? '  \\n**Camion** : ' + c.charge_max_kg + ' kg, ' + c.longueur_utile_cm + ' x ' + c.largeur_utile_cm + ' x ' + c.hauteur_utile_cm + ' cm' : ''); })() }}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 2,
+  "topRow": 41,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "jtxtteu5wj",
+  "widgetId": "oodg0v4gia",
   "widgetName": "Text1"
 }

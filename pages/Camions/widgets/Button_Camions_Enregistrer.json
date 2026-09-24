@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 93,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Input_Camions_immatriculation.text || !Input_Camions_charge_max_kg.text || !Input_Camions_longueur_utile_cm.text || !Input_Camions_largeur_utile_cm.text || !Input_Camions_hauteur_utile_cm.text || (!appsmith.store.nouveau_camions && !Table_Camions.selectedRow.id) }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ie2l2fuwe9",
+  "leftColumn": 39,
+  "minWidth": 120.0,
+  "mobileBottomRow": 93,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 89,
+  "onClick": "{{ (appsmith.store.nouveau_camions ? inserer_camions.run() : modifier_camions.run()).then(() => storeValue('nouveau_camions', false)).then(() => Promise.all([get_camions.run()])).then(() => showAlert('Enregistré', 'success')).catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 93,
+  "originalTopRow": 89,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Enregistrer",
+  "topRow": 89,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "9hqq2ns5mh",
+  "widgetName": "Button_Camions_Enregistrer"
+}

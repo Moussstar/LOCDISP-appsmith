@@ -1,0 +1,17 @@
+SELECT
+    ca.id,
+    ca.immatriculation,
+    ca.modele,
+    ca.charge_max_kg,
+    ca.longueur_utile_cm,
+    ca.largeur_utile_cm,
+    ca.hauteur_utile_cm,
+    ca.depot_id,
+    d.nom AS depot,
+    ca.chauffeur_nom,
+    ca.heure_debut,
+    ca.heure_fin,
+    ca.actif
+FROM camions ca
+LEFT JOIN depots d ON d.id = ca.depot_id
+ORDER BY ca.modele;

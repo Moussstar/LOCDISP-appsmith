@@ -1,0 +1,7 @@
+INSERT INTO depots (nom, adresse, code_postal, ville)
+VALUES (
+    NULLIF({{ String(Input_Depots_nom.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Depots_adresse.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Depots_code_postal.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Depots_ville.text ?? '') }}::text, '')
+);

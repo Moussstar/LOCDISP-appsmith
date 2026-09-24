@@ -1,0 +1,12 @@
+UPDATE materiels
+SET
+    reference = NULLIF({{ String(Input_Parc_reference.text ?? '') }}::text, ''),
+    nom = NULLIF({{ String(Input_Parc_nom.text ?? '') }}::text, ''),
+    categorie = NULLIF({{ String(Input_Parc_categorie.text ?? '') }}::text, ''),
+    longueur_cm = NULLIF({{ String(Input_Parc_longueur_cm.text ?? '') }}::text, '')::integer,
+    largeur_cm = NULLIF({{ String(Input_Parc_largeur_cm.text ?? '') }}::text, '')::integer,
+    hauteur_cm = NULLIF({{ String(Input_Parc_hauteur_cm.text ?? '') }}::text, '')::integer,
+    poids_kg = NULLIF({{ String(Input_Parc_poids_kg.text ?? '') }}::text, '')::integer,
+    duree_manutention_min = COALESCE(NULLIF({{ String(Input_Parc_duree_manutention_min.text ?? '') }}::text, '')::integer, duree_manutention_min),
+    depot_id = NULLIF({{ String(Select_Parc_depot_id.selectedOptionValue ?? '') }}::text, '')::integer
+WHERE id = {{ Table_Parc.selectedRow.id }};

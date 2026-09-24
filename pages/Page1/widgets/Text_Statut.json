@@ -1,0 +1,56 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 52,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "truncateButtonColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "lscatgvs38",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 52,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 48,
+  "needsErrorInfo": false,
+  "originalBottomRow": 52,
+  "originalTopRow": 48,
+  "overflow": "SCROLL",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 30,
+  "shouldTruncate": false,
+  "text": "{{ (() => { const o = Table_Ordres.selectedRow; const c = (get_camions.data || []).find(c => String(c.id) === String(Select_Camion.selectedOptionValue)); const tient = (o, c) => o.hauteur_cm <= c.hauteur_utile_cm && ((o.longueur_cm <= c.longueur_utile_cm && o.largeur_cm <= c.largeur_utile_cm) || (o.longueur_cm <= c.largeur_utile_cm && o.largeur_cm <= c.longueur_utile_cm)); if (!o || !o.ordre_id) return 'Sélectionner un ordre'; if (!c) return 'Sélectionner un camion'; if (Number(o.poids_kg) > Number(c.charge_max_kg)) return '⚠️ SURCHARGE : ' + o.poids_kg + ' kg pour ' + c.charge_max_kg + ' kg'; if (o.longueur_cm != null && !tient(o, c)) return '⚠️ Le matériel ne tient pas dans la benne'; return '✅ Chargement possible'; })() }}",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 48,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "fo8cl0lcz5",
+  "widgetName": "Text_Statut"
+}

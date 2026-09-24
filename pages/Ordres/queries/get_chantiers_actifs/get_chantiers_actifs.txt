@@ -1,0 +1,5 @@
+SELECT ch.id, c.nom_entreprise || ' - ' || ch.nom_chantier AS label_affiche
+FROM chantiers ch
+JOIN clients c ON c.id = ch.client_id
+WHERE ch.statut = 'actif'
+ORDER BY label_affiche;

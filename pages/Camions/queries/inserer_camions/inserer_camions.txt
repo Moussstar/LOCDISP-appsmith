@@ -1,0 +1,14 @@
+INSERT INTO camions (immatriculation, modele, charge_max_kg, longueur_utile_cm, largeur_utile_cm, hauteur_utile_cm, depot_id, chauffeur_nom, heure_debut, heure_fin, actif)
+VALUES (
+    NULLIF({{ String(Input_Camions_immatriculation.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Camions_modele.text ?? '') }}::text, ''),
+    NULLIF({{ String(Input_Camions_charge_max_kg.text ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Camions_longueur_utile_cm.text ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Camions_largeur_utile_cm.text ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Camions_hauteur_utile_cm.text ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Select_Camions_depot_id.selectedOptionValue ?? '') }}::text, '')::integer,
+    NULLIF({{ String(Input_Camions_chauffeur_nom.text ?? '') }}::text, ''),
+    COALESCE(NULLIF({{ String(Input_Camions_heure_debut.text ?? '') }}::text, '')::time, '07:00'),
+    COALESCE(NULLIF({{ String(Input_Camions_heure_fin.text ?? '') }}::text, '')::time, '17:00'),
+    COALESCE(NULLIF({{ String(Select_Camions_actif.selectedOptionValue ?? '') }}::text, '')::boolean, TRUE)
+);

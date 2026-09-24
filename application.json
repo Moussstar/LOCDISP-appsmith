@@ -7,11 +7,35 @@
   "icon": "bicycle",
   "pages": [
     {
-      "id": "Page1",
+      "id": "Tournees",
       "isDefault": true
     },
     {
-      "id": "Tournees",
+      "id": "Ordres",
+      "isDefault": false
+    },
+    {
+      "id": "Parc",
+      "isDefault": false
+    },
+    {
+      "id": "Clients",
+      "isDefault": false
+    },
+    {
+      "id": "Chantiers",
+      "isDefault": false
+    },
+    {
+      "id": "Camions",
+      "isDefault": false
+    },
+    {
+      "id": "Depots",
+      "isDefault": false
+    },
+    {
+      "id": "Page1",
       "isDefault": false
     }
   ]

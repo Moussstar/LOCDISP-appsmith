@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "g1ol73d9ph",
+  "leftColumn": 51,
+  "minWidth": 120.0,
+  "mobileBottomRow": 31,
+  "mobileLeftColumn": 51,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 27,
+  "onClick": "{{ (async () => { if (!Select_Chantier.selectedOptionValue || !Select_Type.selectedOptionValue) return showAlert('Choisir un chantier et un type', 'warning'); if (!(Select_Materiels.selectedOptionValues || []).length) return showAlert('Choisir au moins un matériel', 'warning'); if (!DatePicker_Prevue.formattedDate) return showAlert('Indiquer la date planifiée', 'warning'); if (Select_Type.selectedOptionValue === 'ramassage' && !DatePicker_Limite.formattedDate) return showAlert('Indiquer la fin de location', 'warning'); const nb = Select_Materiels.selectedOptionValues.length; await creer_ordre.run(); await resetWidget('Select_Materiels'); await Promise.all([get_ordres.run(), get_materiels_pour_ordre.run()]); showAlert(nb + ' ordre(s) créé(s)', 'success'); })().catch(e => showAlert(e.message, 'error')) }}",
+  "originalBottomRow": 31,
+  "originalTopRow": 27,
+  "parentColumnSpace": 12.578125,
+  "parentId": "0",
+  "parentRowSpace": 10.0,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Créer",
+  "topRow": 27,
+  "type": "BUTTON_WIDGET",
+  "version": 1.0,
+  "widgetId": "e30my5zpja",
+  "widgetName": "Button_Creer"
+}
