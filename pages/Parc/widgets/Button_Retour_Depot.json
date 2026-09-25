@@ -28,7 +28,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ Table_Parc.selectedRow.statut !== 'maintenance' }}",
+  "isDisabled": "{{ !['maintenance', 'a_controler'].includes(Table_Parc.selectedRow.statut) }}",
   "isLoading": false,
   "isVisible": true,
   "key": "9xx5chsggu",
@@ -50,7 +50,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 64,
-  "text": "Remettre au dépôt",
+  "text": "Disponible au dépôt",
   "topRow": 81,
   "type": "BUTTON_WIDGET",
   "version": 1.0,

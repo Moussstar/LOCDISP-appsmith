@@ -28,7 +28,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ Table_Parc.selectedRow.statut !== 'au_depot' }}",
+  "isDisabled": "{{ !['au_depot', 'a_controler'].includes(Table_Parc.selectedRow.statut) }}",
   "isLoading": false,
   "isVisible": true,
   "key": "yub3o3xm4g",

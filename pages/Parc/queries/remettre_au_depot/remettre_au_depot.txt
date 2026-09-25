@@ -1,4 +1,5 @@
+-- Fin de maintenance ou contrôle de retour réussi : le matériel est disponible.
 UPDATE materiels
 SET statut = 'au_depot'
 WHERE id = {{ Table_Parc.selectedRow.id }}
-  AND statut = 'maintenance';
+  AND statut IN ('maintenance', 'a_controler');
